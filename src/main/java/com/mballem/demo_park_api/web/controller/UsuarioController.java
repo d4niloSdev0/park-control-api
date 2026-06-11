@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/v1/usuarios")
-public class git UsuarioController {
+public class UsuarioController {
 
     private final UsuarioService usuarioService;
 
@@ -22,6 +22,11 @@ public class git UsuarioController {
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> getById(@PathVariable Long id) {
         Usuario user = usuarioService.buscarPorId(id);
+        return ResponseEntity.ok(user);
+    }
+    @PatchMapping("/{id}")
+    public ResponseEntity<Usuario> updataPassoword(@PathVariable Long id, @RequestBody Usuario usuario) {
+        Usuario user = usuarioService.editarSenha(id, usuario.getPassword());
         return ResponseEntity.ok(user);
     }
 }
