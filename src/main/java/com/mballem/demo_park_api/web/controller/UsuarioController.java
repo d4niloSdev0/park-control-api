@@ -2,6 +2,7 @@ package com.mballem.demo_park_api.web.controller;
 
 import com.mballem.demo_park_api.enity.Usuario;
 import com.mballem.demo_park_api.service.UsuarioService;
+import com.mballem.demo_park_api.web.dto.UsuarioAllDto;
 import com.mballem.demo_park_api.web.dto.UsuarioCreateDto;
 import com.mballem.demo_park_api.web.dto.UsuarioResponseDto;
 import com.mballem.demo_park_api.web.dto.UsuarioSenhaDto;
@@ -36,8 +37,11 @@ public class UsuarioController {
         return ResponseEntity.noContent().build();
     }
     @GetMapping
-    public ResponseEntity<List<Usuario>> getAll() {
-        List<Usuario> users = usuarioService.buscarTodos();
+    public ResponseEntity<List<UsuarioAllDto>> getAll() {
+        List<UsuarioAllDto> users = usuarioService.buscarTodos()
+                .stream()
+                .map(UsuarioMapper::allDto)
+                .toList();
         return ResponseEntity.ok(users);
     }
 }

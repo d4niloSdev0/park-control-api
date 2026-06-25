@@ -1,6 +1,7 @@
 package com.mballem.demo_park_api.web.dto.mapper;
 
 import com.mballem.demo_park_api.enity.Usuario;
+import com.mballem.demo_park_api.web.dto.UsuarioAllDto;
 import com.mballem.demo_park_api.web.dto.UsuarioCreateDto;
 import com.mballem.demo_park_api.web.dto.UsuarioResponseDto;
 import org.modelmapper.ModelMapper;
@@ -22,5 +23,8 @@ public class UsuarioMapper {
         ModelMapper mapper = new  ModelMapper();
         mapper.addMappings(props);
         return mapper.map(usuario, UsuarioResponseDto.class);
+    }
+    public static UsuarioAllDto allDto(Usuario usuario){
+        return new ModelMapper().map(usuario, UsuarioAllDto.class);
     }
 }
