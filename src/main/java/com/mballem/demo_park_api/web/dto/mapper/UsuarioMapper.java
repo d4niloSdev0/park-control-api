@@ -26,5 +26,6 @@ public class UsuarioMapper {
     }
     public static UsuarioAllDto allDto(Usuario usuario){
         return new ModelMapper().map(usuario, UsuarioAllDto.class);
+
     }
 }
