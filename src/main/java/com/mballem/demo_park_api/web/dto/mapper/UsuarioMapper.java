@@ -1,6 +1,6 @@
 package com.mballem.demo_park_api.web.dto.mapper;
 
-import com.mballem.demo_park_api.enity.Usuario;
+import com.mballem.demo_park_api.entity.Usuario;
 import com.mballem.demo_park_api.web.dto.UsuarioAllDto;
 import com.mballem.demo_park_api.web.dto.UsuarioCreateDto;
 import com.mballem.demo_park_api.web.dto.UsuarioResponseDto;

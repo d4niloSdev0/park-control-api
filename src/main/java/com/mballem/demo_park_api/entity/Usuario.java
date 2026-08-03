@@ -1,4 +1,4 @@
-package com.mballem.demo_park_api.enity;
+package com.mballem.demo_park_api.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

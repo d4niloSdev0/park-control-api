@@ -1,6 +1,6 @@
 package com.mballem.demo_park_api.web.controller;
 
-import com.mballem.demo_park_api.enity.Usuario;
+import com.mballem.demo_park_api.entity.Usuario;
 import com.mballem.demo_park_api.service.UsuarioService;
 import com.mballem.demo_park_api.web.dto.UsuarioAllDto;
 import com.mballem.demo_park_api.web.dto.UsuarioCreateDto;
